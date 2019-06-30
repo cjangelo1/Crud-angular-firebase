@@ -1,0 +1,78 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+            <input type="hidden" name="$key" #$key = "ngModel" [(ngModel)] = "productService.selectedProduct.$key" >
+            <div class="form-group">
+                <input 
+                type="text"
+                class="form-control"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="productService.selectedProduct.name"
+                placeholder="Agrega un Nombre en el Producto"
+                >
+            </div>
+            <div class="form-group">
+                    <input 
+                    type="text"
+                    class="form-control"
+                    name="category"
+                    #category="ngModel"
+                    [(ngModel)]="productService.selectedProduct.category"
+                    placeholder="Agrega un Nombre a la Categoria"
+                    >
+                </div>
+
+                <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        name="location"
+                        #location="ngModel"
+                        [(ngModel)]="productService.selectedProduct.location"
+                        placeholder="Agrega un Nombre una localizacion del producto"
+                        >
+                </div>
+                <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        name="price"
+                        #price="ngModel"
+                        [(ngModel)]="productService.selectedProduct.price"
+                        placeholder="Agrega un precio al producto"
+                        >
+                    </div>
+                    <div class="form-group">
+                            <input 
+                            type="text"
+                            class="form-control"
+                            name="stock"
+                            #stock="ngModel"
+                            [(ngModel)]="productService.selectedProduct.stock"
+                            placeholder="Productos en Stock"
+                            >
+                    </div>
+                    <div class="form-group">
+                            <input 
+                            type="TexImageSource"
+                            class="form-control"
+                            name="img"
+                            #img="ngModel"
+                            [(ngModel)]="productService.selectedProduct.ImageData"
+                            placeholder="agregar imagen"
+                            >
+                    </div>
+                    
+
+                <div class="from-group">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-plus-circle"></i> agregar producto
+                    </button>
+                    <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">   
+                        <i class="fas fa-sync-alt"></i> Reset
+                    </button>
+                </div>
+        </form>
+    </div>
+</div>
