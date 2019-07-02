@@ -23,7 +23,6 @@ export class ProductService {
       location: product.location,
       price: product.price,
       stock: product.stock,
-      img: product.img
     });
   }
   updateProduct(product: Product)
@@ -34,7 +33,6 @@ export class ProductService {
       location: product.location,
       price: product.price,
       stock: product.stock,
-      img: product.img
     });
   }
   deleteProduct($key:string)

@@ -19,7 +19,7 @@
                     name="category"
                     #category="ngModel"
                     [(ngModel)]="productService.selectedProduct.category"
-                    placeholder="Agrega un Nombre a la Categoria"
+                    placeholder="Agrega la Categoria"
                     >
                 </div>
 
@@ -30,7 +30,7 @@
                         name="location"
                         #location="ngModel"
                         [(ngModel)]="productService.selectedProduct.location"
-                        placeholder="Agrega un Nombre una localizacion del producto"
+                        placeholder="Agrega una localizacion del producto"
                         >
                 </div>
                 <div class="form-group">
@@ -52,18 +52,7 @@
                             [(ngModel)]="productService.selectedProduct.stock"
                             placeholder="Productos en Stock"
                             >
-                    </div>
-                    <div class="form-group">
-                            <input 
-                            type="TexImageSource"
-                            class="form-control"
-                            name="img"
-                            #img="ngModel"
-                            [(ngModel)]="productService.selectedProduct.ImageData"
-                            placeholder="agregar imagen"
-                            >
-                    </div>
-                    
+                    </div>                 
 
                 <div class="from-group">
                     <button class="btn btn-primary" type="submit">

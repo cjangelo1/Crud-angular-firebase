@@ -5,5 +5,4 @@ export class Product {
     location: string;
     price: number;
     stock: number;
-    img: ImageData;   
 }

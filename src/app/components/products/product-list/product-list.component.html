@@ -9,7 +9,6 @@
                     <td>precio</td>
                     <td>localizacion</td>
                     <td>stock</td>
-                    <td>img</td>
                 </tr>
                 <tr *ngFor="let Product of productList">
                     <td>{{Product.name}}</td>
@@ -17,7 +16,6 @@
                     <td>{{Product.price}}</td>
                     <td>{{Product.location}}</td>
                     <td>{{Product.stock}}</td>
-                    <td>{{Product.img}}</td>
                     <td>
                         <a class="btn btn-secondary text-white" (click) = "onEdit(Product)">
                             <i class="far fa-edit"></i>
